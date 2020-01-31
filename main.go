@@ -19,8 +19,6 @@ func main() {
 	})
 	m.HandleMessage(func(s *melody.Session, msg []byte) {
 		m.Broadcast(msg)
-		servermsg := "<Sever> suprise mother fucker"
-		m.Broadcast([]byte(servermsg))
 	})
 	r.Run(":8080")
 }
